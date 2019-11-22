@@ -24,7 +24,8 @@ class IdentifierSpec extends Specification {
     @Unroll
     void "convert json string '#json' to valid java identifier '#identifier'" () {
         expect:
-        Identifier.fromJson (json) == identifier
+//        Identifier.fromJson (json) == identifier
+        Identifiers.fromJson (json) == identifier
 
         where:
         json  | identifier
